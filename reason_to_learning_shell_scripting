@@ -1,3 +1,7 @@
-Being a developer often requires that you dip into the command line. Whether you are setting up configuration files, starting/stopping servers, or running build tools, 
+Points
+
+1. Learn shell scripting and automate your command-line tasks
+
+2. Being a developer often requires that you dip into the command line. Whether you are setting up configuration files, starting/stopping servers, or running build tools, 
 you’ll find you repeat yourself, time and time again. Shell scripting is a way to automate command-line tasks, 
 saving you time to pet your favorite cat or play ping pong. To automate repetitive tasks, it’s essential to learn basic shell scripting.
