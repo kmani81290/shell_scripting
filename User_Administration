@@ -3,10 +3,16 @@ Managing Users and Groups
 There are four main user administration files −
 
     /etc/passwd − Keeps the user account and password information. This file holds the majority of information about accounts on the Unix system.
-
     /etc/shadow − Holds the encrypted password of the corresponding account. Not all the systems support this file.
-
     /etc/group − This file contains the group information for each account.
-
     /etc/gshadow − This file contains secure group account information.
+    
+
+CMDS:-
+1 	useradd     =>  Adds accounts to the system
+2 	usermod     =>  Modifies account attributes
+3 	userdel     =>  Deletes accounts from the system
+4 	groupadd    =>  Adds groups to the system
+5 	groupmod    =>  Modifies group attributes
+6 	groupdel    =>  Removes groups from the system
 
