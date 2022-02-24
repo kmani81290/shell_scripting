@@ -1,0 +1,16 @@
+Scenario:
+ >GIS has requested that every file in the chartertest folder that is of type .DWG be collected and placed into a folder called “DWG”, you will need to create this folder, it can be outside of the chartertest folder.
+   >This process needs to be repeatable so it can run as a cronjob.
+    >We do not want any subdirectories created inside the DWG folder, just a collection of all dwg files found in “chartertest”.
+    >There will be duplicate files in the dataset, if you run into a duplicate or duplicate
+
+#!/bin/bash
+FIND=/usr/bin/find
+SOURCE=/vagrant/chartertest
+LOGFILE=/vagrant/log.txt
+ECHO=/bin/echo
+DATE=`date "+%D %T"`
+$ECHO ">>>>>>>Process Iniated $DATE <<<<<<<<<<<<<<" >> $LOGFILE
+$FIND $SOURCE -type f -iname '*.dwg' | sed "s/.*/,'&',/" | awk -F"," '{ print "rsync -avz "$2" /vagrant/DWG/"}' | bash -x >> $LOGFILE
+sleep 5
+$ECHO ">>>>>>>Process Completed $DATE <<<<<<<<<<<<<<" >> $LOGFILE
