@@ -1,0 +1,7 @@
+Issue with executing shell scripting:
+
+/bin/sh^M: bad interpreter: No such file or directory
+
+:set fileformat=unix
+
+https://stackoverflow.com/questions/2920416/configure-bin-shm-bad-interpreter
